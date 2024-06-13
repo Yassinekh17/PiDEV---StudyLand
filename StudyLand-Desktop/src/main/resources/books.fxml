@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.Books"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Liste des Livres" />
+
+        <!-- ListView pour afficher la liste des livres -->
+        <ListView fx:id="bookListView" prefHeight="300.0" prefWidth="400.0" />
+
+        <!-- Bouton pour charger les livres -->
+        <Button text="Charger les Livres" onAction="#loadBooks" />
+    </VBox>
+
+</AnchorPane>

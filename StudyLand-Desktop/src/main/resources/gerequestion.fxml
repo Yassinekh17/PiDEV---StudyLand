@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="824.0" prefWidth="1295.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Gerequestion">
+   <content>
+      <AnchorPane prefHeight="1564.0" prefWidth="1355.0" style="-fx-background-color: #ffffff;">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="353.0" layoutX="50.0" layoutY="1019.0" stroke="#f8982a" strokeType="INSIDE" strokeWidth="1.7" width="982.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="353.0" layoutX="50.0" layoutY="525.0" stroke="#f8982a" strokeType="INSIDE" strokeWidth="1.7" width="985.0" />
+            <Label layoutX="752.0" layoutY="138.0" />
+            <Label layoutX="75.0" layoutY="36.0" />
+            <TextField fx:id="ajoutdomain" layoutX="600.0" layoutY="620.0" prefHeight="40.0" prefWidth="199.0" promptText="domaine" />
+            <Button id="button" layoutX="707.0" layoutY="687.0" mnemonicParsing="false" onAction="#btnajouter" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #F8982A;" stylesheets="@question.css" text="Ajouter" />
+            <Text layoutX="357.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter question" wrappingWidth="212.2889404296875">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <TextField fx:id="modfdomaine" layoutX="752.0" layoutY="1155.0" prefHeight="40.0" prefWidth="186.0" promptText="domaine" />
+            <TextArea fx:id="modifeneonce" layoutX="749.0" layoutY="1228.0" prefHeight="40.0" prefWidth="186.0" promptText="énoncé de question" />
+            <Text layoutX="468.0" layoutY="980.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier question" wrappingWidth="230.4000000000001">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Button layoutX="845.0" layoutY="1279.0" mnemonicParsing="false" onAction="#btnmodifier" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #F8982A;" text="Modifier" />
+            <Button layoutX="384.0" layoutY="1067.0" mnemonicParsing="false" onAction="#récupérer" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #F8982A;" text="récupérer" />
+            <TableView fx:id="tab" layoutX="75.0" layoutY="1122.0" prefHeight="212.0" prefWidth="469.0">
+               <columns>
+                  <TableColumn fx:id="columnenonce" prefWidth="468.7998962402344" text="ènoncé" />
+               </columns>
+            </TableView>
+            <TextField fx:id="idchercher" layoutX="96.0" layoutY="1063.0" prefHeight="36.0" prefWidth="232.0" />
+            <AnchorPane layoutX="-3.0" layoutY="1.0" prefHeight="290.0" prefWidth="1205.0" style="-fx-background-image: #ffffff; -fx-background-color: #EAEDF0;">
+               <children>
+                  <ImageView fitHeight="278.0" fitWidth="316.0" layoutX="820.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@src/q1-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="49.0" layoutY="98.0" prefHeight="46.0" prefWidth="404.0" text="ajouter des questions">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="161.0" prefHeight="46.0" prefWidth="442.0" text="modifier des questions">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="406.0" layoutY="944.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/icons8-modifier-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="296.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/icons8-ajouter-100.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="ajouteneonce" layoutX="126.0" layoutY="578.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="218.0" prefWidth="242.0" promptText="tapper votre question" />
+            <ImageView fitHeight="46.0" fitWidth="41.0" layoutX="100.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/icons8-enregistrer.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="87.0" fitWidth="96.0" layoutX="277.0" layoutY="702.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/Hand%20holding%20pen.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="button21" layoutX="257.0" layoutY="1067.0" mnemonicParsing="false" onAction="#recherche" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #F8982A;" stylesheets="@question.css" text="recherche" />
+            <Text layoutX="563.0" layoutY="1109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choisir le réponse à modifier" wrappingWidth="189.888916015625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Line endX="110.20004272460938" endY="6.103515625E-5" layoutX="679.0" layoutY="673.0" startX="70.60009765625" startY="6.103515625E-5" />
+            <Line endX="110.20004272460938" endY="6.103515625E-5" layoutX="752.0" layoutY="1210.0" startX="70.60009765625" startY="6.103515625E-5" />
+            <ImageView fitHeight="41.0" fitWidth="62.0" layoutX="542.0" layoutY="1114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/icons8-selection-60.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="117.0" layoutX="925.0" layoutY="768.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/icons8-question-100%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

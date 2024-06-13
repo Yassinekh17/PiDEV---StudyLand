@@ -1,0 +1,60 @@
+.text-input {
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #ffffff; /* Change border color to white */
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #303030; /* Change background color to dark gray */
+    -fx-text-fill: #ffffff; /* Change text color to white */
+}
+
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.button {
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #303030; /* Change background color to dark gray */
+    -fx-text-fill: #ffffff; /* Change text color to white */
+}
+
+.combo-box {
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #ffffff; /* Change border color to white */
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #303030; /* Change background color to dark gray */
+    -fx-text-fill: #ffffff; /* Change text color to white */
+}
+
+.web-view {
+    -fx-border-width: 1px;
+    -fx-border-color: #ffffff; /* Change border color to white */
+    -fx-border-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #505050; /* Change hover background color to darker gray */
+}
+
+.button:pressed {
+    -fx-background-color: #202020; /* Change pressed background color to darkest gray */
+}
+
+.button:disabled {
+    -fx-opacity: 0.5;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-padding: 0 0 5px 0;
+    -fx-text-fill: #ffffff; /* Change text color to white */
+}

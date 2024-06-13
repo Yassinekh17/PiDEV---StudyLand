@@ -1,0 +1,187 @@
+/*.text {
+    -fx-font-family: 'Poppins';
+    src: url('Poppins_Regular.ttf');
+}*/
+.error-textfield {
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+}
+.combo-box
+{
+    -fx-background-color :linear-gradient(to top right, #1c5f95, #D4CEE3);
+    -fx-border-radius: 8px;
+
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   #2D75E8;
+}
+.table-view .column-header .label{
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+    -fx-cell-size: 30;
+    -fx-alignment: center-left;
+    -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+}
+.table-row-cell:selected .text {
+    -fx-fill : white ;
+
+}
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive(  #2D75E8,80%);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive(  #2D75E8,80%);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+#hello{
+    -fx-font-family:'Poppins';
+}
+
+/* Style de la carte utilisateur */
+.card-user {
+    -fx-background-color: #4658a9; /* Couleur de fond */
+    -fx-border-color: rgba(115, 189, 199, 0.2); /* Couleur de la bordure */
+    -fx-border-width: 1px; /* Largeur de la bordure */
+    -fx-border-radius: 5px; /* Rayon des coins */
+    -fx-padding: 10px; /* Espacement interne */
+}
+
+/* Style des étiquettes (nom, prénom, email) */
+.card-user .label {
+    -fx-background-color: #4658a9; /* Couleur de fond */
+    -fx-border-color: rgba(115, 189, 199, 0.2); /* Couleur de la bordure */
+    -fx-text-fill: #333333; /* Couleur du texte */
+    -fx-padding: 5px; /* Espacement interne */
+    -fx-border-radius: 3px; /* Rayon des coins */
+    -fx-font-weight: bold; /* Poids de la police */
+}
+.box-mdp-oublier {
+    -fx-background-color: #C2C2D2;
+}
+.text-field {
+    -fx-font-size: 14px;
+    -fx-text-fill: #11142d;
+    -fx-padding: 0 0 0 4%;
+    -fx-border-color: #D9D9D9;
+    -fx-border-width: 0.75px;
+    -fx-border-radius: 8px;
+    -fx-padding: 0 0 0 4%;
+    -fx-background-color: rgba(228, 228, 228, 0.49776);
+
+}
+.button_inscrit{
+    -fx-border-width: 0.75px;
+    -fx-border-radius: 8px;
+    -fx-background-color: #2F2B6D;
+}
+.button_inscrit:pressed
+{    -fx-background-color : rgba(42, 61, 155, 0.07);
+    -fx-font-size: 13px;
+}
+.button_inscrit:hover {
+    -fx-background-color :linear-gradient(to top left, rgb(229, 151, 10), #1451d7);
+}
+.compte_user_side_bar{
+    -fx-background-color: rgba(228, 228, 228, 0.49776);
+
+}
+.button3
+{
+    -fx-font-weight: bold;
+    -fx-font-family:'Poppins';
+    -fx-background-radius :  0 0 0 0;
+    -fx-background-color: transparent;
+
+}
+
+.button3:pressed
+{
+    -fx-background-color : rgba(42, 61, 155, 0.07);
+}
+.compte_user_nav_bar{
+    -fx-background-color: rgba(228, 228, 228, 0.49776);
+
+}
+.home_recherche_button{
+    -fx-border-width: 18px;
+    -fx-background-color: #F8982A;
+    -fx-border-radius: 18px;
+
+}
+.home_button_navbar{
+    -fx-border-width: 18px;
+    -fx-background-color: transparent ;
+    -fx-border-radius: 18px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #11142d;
+
+}
+.VBox{
+    -fx-width: 464px;
+    -fx-height: 767px;
+   // -fx-background-color: transparent;
+    -fx-border-radius: 40px;
+    -fx-border-width: 3px;
+    -fx-border-color: #2D75E8;
+   //-fx-background-color :linear-gradient(to top left, rgba(229, 151, 10, 0.42), rgba(20, 81, 215, 0.87));
+    -fx-background-color:transparent;
+;
+}
+
+.card_hbox1{
+    -fx-border-color:transparent ;
+    -fx-width: 200px;
+
+
+}
+
+
+

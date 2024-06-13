@@ -1,0 +1,116 @@
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius:8px ;
+
+
+}
+.shadow{
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.5), 8,0,0,0);
+}
+.table-view {
+    -fx-padding: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: #794AFF;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color:  #794AFF;
+
+}
+
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+    -fx-pref-height: 40px; /* Utilisez -fx-pref-height au lieu de fx-size */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+
+}
+.list-cell {
+
+
+}
+
+
+.choice-box .menu-item {
+    -fx-text-fill: white; /* Adjust text color as needed */
+
+
+}
+/* Ajoutez ce code CSS à votre fichier de style (question.css) */
+.root {
+    -fx-background-color: #EAEDF0;
+}
+
+.label {
+    -fx-font-size: 15px;
+}
+
+.text-field, .date-picker, .list-view{
+    -fx-font-size: 16px;
+    -fx-background-color: #000; /* Couleur de fond */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.list-view {
+    -fx-background-color: #EEE5FF; /* Couleur de fond de la liste */
+}
+
+.list-view:selected {
+    -fx-background-color: #B0C4DE; /* Couleur de fond lorsqu'un élément est sélectionné */
+}
+
+
+
+
+
+
+.aa{
+    -fx-background-color: linear-gradient(to bottom right, #43A1F6, #A676FF) ;
+}
+
+
+
+
+
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    max-width: 240px;
+}
+
+.coolinput label.text {
+    font-size: 0.75rem;
+    color: #818CF8;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #e8e8e8;
+    width: fit-content;
+}
+
+.coolinput input[type=text].input {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+    background: #e8e8e8;
+}
+.buttonaudio{
+
+    -fx-background-color: transparent;
+}
+.buttonaudio:hover {
+    -fx-background-color :linear-gradient(to top left, rgb(229, 151, 10), #1451d7);
+}
+.boxresultat{
+    -fx-border-color: #E5970AFF;
+}

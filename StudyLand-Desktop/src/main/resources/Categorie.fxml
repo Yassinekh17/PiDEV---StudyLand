@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="683.0" prefWidth="953.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CategorieController">
+   <children>
+      <Label layoutX="418.0" layoutY="124.0" stylesheets="@styles.css" text="Nom categorie" />
+      <TextField fx:id="NomC" layoutX="534.0" layoutY="120.0" stylesheets="@styles.css" />
+      <Button layoutX="728.0" layoutY="118.0" mnemonicParsing="false" onAction="#AjouterCategorie" prefHeight="29.0" prefWidth="71.0" stylesheets="@styles.css" text="Ajouter" />
+      <Button layoutX="452.0" layoutY="380.0" mnemonicParsing="false" onAction="#AfficherCat" prefHeight="26.0" prefWidth="91.0" stylesheets="@styles.css" text="Afficher" />
+      <ListView fx:id="categorieListView" layoutX="397.0" layoutY="176.0" prefHeight="190.0" prefWidth="470.0" stylesheets="@styles.css" />
+      <ImageView fitHeight="430.0" fitWidth="331.0" layoutX="14.0" layoutY="110.0" pickOnBounds="true">
+         <image>
+            <Image url="@src/Categorie.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="37.0" layoutX="364.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/categories.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="accederFormation" layoutX="68.0" layoutY="547.0" mnemonicParsing="false" onAction="#accederFormation" stylesheets="@styles.css" text="Acceder a Formation" />
+      <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="415.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/panneau-daffichage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="142.0" fitWidth="102.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/thumbnail_logo.png" />
+         </image>
+      </ImageView>
+      <Line endX="-95.0" endY="450.60003662109375" layoutX="450.0" layoutY="155.0" startX="-95.00003051757812" startY="-117.39999389648438" stroke="#8577e4" />
+      <ImageView fitHeight="29.0" fitWidth="37.0" layoutX="815.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/ajouter-le-fichier.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="412.0" layoutY="411.0" prefHeight="200.0" prefWidth="230.0">
+         <children>
+            <HBox fx:id="affichagecoursvbox" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="104.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox fx:id="afficherpdf" prefHeight="200.0" prefWidth="100.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="138.0" layoutY="122.0" text="Ajouter une Categorie:" textFill="#1f8a99">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="24.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/fleches.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="574.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/supprimer.png" />
+         </image>
+      </ImageView>
+      <!-- Add the Delete Button -->
+      <Button layoutX="626.0" layoutY="383.0" mnemonicParsing="false" onAction="#supprimerCategorie" prefHeight="26.0" prefWidth="91.0" stylesheets="@styles.css" text="Supprimer" />
+      <Button layoutX="798.0" layoutY="383.0" mnemonicParsing="false" onAction="#modifierCategorie" prefHeight="26.0" prefWidth="91.0" stylesheets="@styles.css" text="Modifier" />
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="751.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/modifier.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

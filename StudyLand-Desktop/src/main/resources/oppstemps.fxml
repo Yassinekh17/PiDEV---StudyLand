@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Oppstemps">
+   <children>
+      <Text layoutX="20.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le temps imparti s'est écoulé" wrappingWidth="272.5367736816406">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="40.0" fitWidth="55.0" layoutX="293.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/icons8-excuses-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="433.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/ops.gif" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="98.0" layoutY="250.0" prefHeight="99.0" prefWidth="161.0" style="-fx-background-color: #F8982A;" styleClass="white-bg" stylesheets="@question.css">
+         <children>
+            <Text fx:id="resultat" layoutX="32.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" wrappingWidth="96.20011901855469">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Label layoutX="28.0" layoutY="14.0" styleClass="shadow" stylesheets="@question.css" text="Resultat">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="119.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/icons8-grades-80.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="400.0" layoutY="287.0" mnemonicParsing="false" onAction="#reessayer" style="-fx-background-color: #F8982A;" text="réessayer" />
+   </children>
+</AnchorPane>

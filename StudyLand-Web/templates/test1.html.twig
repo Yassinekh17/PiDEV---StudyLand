@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QR Code Generator</title>
+		<!-- Other head elements -->
+		<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+	</head>
+	<body>
+		<p>QR Code Generator</p>
+		<div id="qrcode"></div>
+
+		<!-- YouTube Video -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/RRubcjpTkks" frameborder="0" allowfullscreen></iframe>
+
+		<script>
+			// Generate QR code
+var videoUrl = 'https://www.youtube.com/watch?v=RRubcjpTkks';
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+text: videoUrl,
+width: 200,
+height: 200
+});
+		</script>
+	</body>
+</html>

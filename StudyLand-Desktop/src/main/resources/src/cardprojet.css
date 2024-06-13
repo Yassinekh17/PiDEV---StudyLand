@@ -1,0 +1,31 @@
+.custom-card {
+    -fx-background-color: #EAEDF0;
+
+    -fx-border-radius: 4px;
+}
+
+/* Move the background color property here to apply to all VBoxes */
+.card-content {
+}
+
+/* Style the title label */
+#idtitle {
+    -fx-font-family: "System Bold";
+    -fx-font-size: 17.0;
+}
+
+/* Style the text in the card */
+#idtext {
+    -fx-font-size: 14.0;
+    -fx-fill: #333333; /* Couleur du texte */
+    -fx-padding: 0 10 0 0; /* Ajoutez le padding à gauche, ajustez-le selon vos préférences */
+    -fx-text-alignment: center; /* Centre le texte horizontalement */
+    -fx-alignment: center; /* Centre le texte verticalement */
+
+}
+
+/* Style the button */
+#idbouton {
+    -fx-background-color: #F8982A; /* Button background color */
+    -fx-text-fill: #000; /* Button text color */
+}

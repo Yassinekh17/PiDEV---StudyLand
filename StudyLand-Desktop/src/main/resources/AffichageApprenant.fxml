@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="513.0" prefWidth="922.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AffichageApprenant">
+   <children>
+      <TableView fx:id="tab_Apprenant" layoutX="91.0" layoutY="64.0" prefHeight="242.0" prefWidth="391.0" stylesheets="@style/styleDash.css">
+        <columns>
+            <TableColumn fx:id="nom_user" prefWidth="77.60003662109375" text="     nom" />
+            <TableColumn fx:id="pre_user" prefWidth="97.5999755859375" text="      prénom" />
+            <TableColumn fx:id="email_user" prefWidth="116.0" text="         Email" />
+            <TableColumn fx:id="supprimer_user" prefWidth="104.7999267578125" text="      Supprimer" />
+
+        </columns>
+      </TableView>
+      <Label layoutX="104.0" layoutY="28.0" prefHeight="27.0" prefWidth="141.0" text="Apprenats" textFill="#0b41e4">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="id_detailUser" layoutX="506.0" layoutY="42.0" prefHeight="278.0" prefWidth="311.0" />
+   </children>
+</AnchorPane>

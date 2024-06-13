@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="1551.0" style="-fx-background-color: #ffffff;" stylesheets="@style/styleDash.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfileApprenant">
+   <children>
+      <AnchorPane layoutX="10.0" prefHeight="644.0" prefWidth="1574.0">
+         <children>
+            <BorderPane fx:id="rootPane" layoutX="165.0" layoutY="84.0" prefHeight="734.0" prefWidth="1128.0">
+               <center>
+                  <StackPane fx:id="centerPane" prefHeight="524.0" prefWidth="1115.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <AnchorPane layoutX="-18.0" layoutY="-16.0" prefHeight="650.0" prefWidth="186.0" style="-fx-background-color: #ffffff;" stylesheets="@style/styleDash.css" />
+            <VBox fx:id="id_side_bar" alignment="TOP_CENTER" layoutX="1.0" layoutY="12.0" prefHeight="621.0" prefWidth="158.0" style="-fx-background-radius: 15 0 0 15;" styleClass="compte_user_side_bar" stylesheets="@style/styleDash.css">
+               <children>
+                  <Button fx:id="id_home" contentDisplay="TOP" mnemonicParsing="false" onAction="#home" prefHeight="72.0" prefWidth="123.0" styleClass="button3" stylesheets="@style/styleDash.css" text="Acceuill" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Poor Richard" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="id_panier" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="126.0" styleClass="button3" stylesheets="@style/styleDash.css" text="panier" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/paniers.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_formation" contentDisplay="TOP" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onAction="#formationApprenants" prefHeight="78.0" prefWidth="118.0" styleClass="button3" stylesheets="@style/styleDash.css" text="Formation" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/diplome.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="id_evaluation" contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onAction="#EvaluationFormateur" prefHeight="74.0" prefWidth="122.0" styleClass="button3" stylesheets="@style/styleDash.css" text="Evaluation" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/lune.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_projetApp" contentDisplay="TOP" mnemonicParsing="false" onAction="#afficherProjetApp" prefHeight="74.0" prefWidth="122.0" styleClass="button3" stylesheets="@style/styleDash.css" text="Projet" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/gestion-de-projet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_parameter" contentDisplay="TOP" mnemonicParsing="false" onAction="#modification" prefHeight="70.0" prefWidth="120.0" styleClass="button3" stylesheets="@style/styleDash.css" text="Parametere" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fx:id="" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/parametres-cog.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="forfaits" contentDisplay="TOP" mnemonicParsing="false" onAction="#Forfaits" prefHeight="76.0" prefWidth="121.0" styleClass="button3" stylesheets="@style/styleDash.css" text="Forfaits" textFill="#2a3d9b">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@src/user_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <TextField id="search" fx:id="id_recherche_formation" layoutX="180.0" layoutY="18.0" prefHeight="34.0" prefWidth="451.0" promptText="    recherche formation" style="-fx-border-radius: 20px; -fx-background-color: white;" styleClass="compte_user_nav_bar" stylesheets="@style/styleDash.css">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="588.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="970.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/not.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="id_image_nav" fitHeight="31.0" fitWidth="57.0" layoutX="1013.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/77.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="id_nom1" layoutX="768.0" layoutY="15.0" prefHeight="31.0" prefWidth="148.0" styleClass="text" stylesheets="@style/styleDash.css" textFill="#06007b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combo_login" layoutX="1130.0" layoutY="18.0" onAction="#onComboLoginSelected" prefHeight="26.0" prefWidth="81.0" stylesheets="@style/styleDash.css" />
+            <Button fx:id="btn_refresh" contentDisplay="TOP" layoutX="1061.0" layoutY="5.0" mnemonicParsing="false" onAction="#refreshData" prefHeight="34.0" prefWidth="33.0" styleClass="button3" stylesheets="@style/styleDash.css" textFill="#2a3d9b">
+               <graphic>
+                  <ImageView fx:id="btn_refrech" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@src/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poor Richard" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="id_nom11" layoutX="677.0" layoutY="15.0" prefHeight="31.0" prefWidth="69.0" styleClass="text" stylesheets="@style/styleDash.css" text="Hello" textFill="#06007b">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

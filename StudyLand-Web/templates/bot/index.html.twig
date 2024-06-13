@@ -1,0 +1,313 @@
+{% block body %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+{% block title %}Aide {% endblock %}
+
+    <!-- Favicon -->
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700family=Open+Sans:wght@400;600display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        {% block stylesheets %}{% endblock %}
+
+</head>
+
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Studyland</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="{{ path('home') }}" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="course.html" class="nav-item nav-link">Courses</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="detail.html" class="dropdown-item">Course Detail</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="team.html" class="dropdown-item">Instructors</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+
+                <a href="{{ path('login') }}" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center my-5 py-5">
+            <h1 class="text-white mt-4 mb-4">Aide</h1>
+            <h1 class="text-white display-1 mb-5">Education  StudyLand</h1>
+            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                    
+
+<div class="chatbot">
+    <div class="chatbot-header">
+        <h1 class="titre">Comment pouvons-nous vous aider ?</h1>
+    </div>
+    <div class="chatbot-messages">
+        {% if response is defined %}
+            <div class="chatbot-message chatbot-message-received">
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+    <div class="chatbot-input">
+       <div class="chatbot-input">
+    <form method="post" action="{{ path('app_bot') }}">
+        <input type="text" id="question" name="message" placeholder="Tapez votre message..." class="welcome-description">
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        <button type="button" onclick="startVoiceRecognition()"><i class="fas fa-microphone"></i></button>
+                <button type="button" onclick="readQuestion()"><i class="fas fa-volume-up"> </i></button>
+    </form>
+    {% if similarQuestions is defined and similarQuestions is not empty %}
+        <div class="similar-questions">
+            <p>Questions similaires :</p>
+            <ul>
+                {% for question in similarQuestions %}
+                    <li>{{ question }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>
+  {% endblock %}
+</div>
+  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<style>
+.welcome-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-content {
+    background-color: #ffffff;
+    border: 2px solid #327ce5
+;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    max-width: 60%; /* Modification */
+    padding: 20px;
+}
+.titre{
+        color: #ffffff;
+
+}
+.welcome-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.chatbot {
+    background-color: #ffffff;
+    border: 2px solid #327ce5
+;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 80%; /* Modification */
+    height: 100vh; /* Modification */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background-color: #327ce5
+;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chatbot-messages {
+    padding: 10px;
+    flex: 1; /* Modification */
+    overflow-y: auto;
+}
+
+.chatbot-message {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.chatbot-message-received {
+    background-color: #327ce5
+;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.chatbot-input {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.chatbot-input input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.chatbot-input button {
+    background-color: #327ce5
+;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbot-input button:hover {
+    background-color: #45a049;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #ff6f61;
+}
+</style>
+
+<script>
+function startVoiceRecognition() {
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = 'fr-FR'; // Langue de reconnaissance vocale (vous pouvez la modifier selon vos besoins)
+  
+    recognition.onresult = function(event) {
+        const voiceText = event.results[0][0].transcript;
+        document.getElementById('question').value = voiceText; // Remplir le champ de message avec le texte converti
+    };
+  
+    recognition.start();
+}
+</script>
+
+<script>
+function startCamera() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            const videoElement = document.getElementById('camera-video');
+            videoElement.srcObject = stream;
+            videoElement.play();
+        })
+        .catch(function(error) {
+            console.error('Erreur lors de l\'accès à la caméra :', error);
+        });
+}
+</script>
+<script>
+
+function readQuestion() {
+    const questionText = document.getElementById('question').value;
+    const speechSynthesis = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(questionText);
+    speechSynthesis.speak(utterance);
+}
+
+
+</script>
+<script>
+</script>

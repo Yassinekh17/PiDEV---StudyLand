@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="674.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterFormationController">
+   <children>
+      <StackPane fx:id="centerPane" prefHeight="889.0" prefWidth="1425.0">
+         <children>
+            <BorderPane fx:id="rootPane1" prefHeight="817.0" prefWidth="1363.0" style="-fx-background-color: #ffffff;" />
+         </children>
+      </StackPane>
+      <Button layoutX="558.0" layoutY="562.0" mnemonicParsing="false" onAction="#AjouterFormation" stylesheets="@styles.css" text="Ajouter" textFill="RED" />
+      <TextField fx:id="NomF" layoutX="544.0" layoutY="82.0" prefHeight="30.0" prefWidth="210.0" promptText="Nom Formation">
+         <stylesheets>
+            <URL value="@styles.css" />
+            <URL value="@styles.css" />
+            <URL value="@styles.css" />
+            <URL value="@styles.css" />
+         </stylesheets></TextField>
+      <TextField fx:id="Description" layoutX="544.0" layoutY="134.0" prefHeight="29.0" prefWidth="210.0" promptText="Desciption" stylesheets="@styles.css" />
+      <TextField fx:id="Duree" layoutX="544.0" layoutY="184.0" prefHeight="30.0" prefWidth="210.0" promptText="Duree" stylesheets="@styles.css" />
+      <TextField fx:id="Prix" layoutX="548.0" layoutY="347.0" prefHeight="30.0" prefWidth="210.0" promptText="Prix" stylesheets="@styles.css" />
+      <TextField fx:id="Niveau" layoutX="549.0" layoutY="403.0" prefHeight="30.0" prefWidth="210.0" promptText="Niveau" stylesheets="@styles.css" />
+      <TextField fx:id="NomC" layoutX="549.0" layoutY="460.0" prefHeight="30.0" prefWidth="210.0" promptText="Nom Categorie" stylesheets="@styles.css" />
+      <DatePicker fx:id="DD" layoutX="546.0" layoutY="238.0" prefHeight="30.0" prefWidth="243.0" promptText="DateDebut" stylesheets="@styles.css" />
+      <DatePicker fx:id="DF" layoutX="546.0" layoutY="294.0" prefHeight="30.0" prefWidth="243.0" promptText="DateFin" stylesheets="@styles.css" />
+      <AnchorPane layoutX="597.0" layoutY="600.0" prefHeight="39.0" prefWidth="113.0" />
+      <ImageView fitHeight="321.0" fitWidth="344.0" layoutX="14.0" layoutY="153.0" pickOnBounds="true">
+         <image>
+            <Image url="@src/13038-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="487.0" layoutY="83.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@src/en-train-detudier.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="142.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/thumbnail_logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_cours" layoutX="127.0" layoutY="536.0" mnemonicParsing="false" onAction="#AccederCours" prefHeight="26.0" prefWidth="145.0" stylesheets="@styles.css" text="Acceder au Cours" />
+      <Line endX="-95.00003051757812" endY="428.20001220703125" layoutX="472.0" layoutY="191.0" startX="-95.00003051757812" startY="-117.39999389648438" stroke="#8577e4" />
+      <Label layoutX="128.0" layoutY="112.0" text="Ajouter une formation:" textFill="#1f8a99">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="29.0" fitWidth="37.0" layoutX="512.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/ajouter-le-fichier.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="37.0" layoutX="29.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/categories.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="80.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/cours.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="702.0" layoutY="562.0" mnemonicParsing="false" onAction="#AfficherF" prefHeight="15.0" prefWidth="69.0" stylesheets="@styles.css" text="Afficher" />
+      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="657.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/panneau-daffichage.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="toggleDarkModeButton" layoutX="186.0" layoutY="583.0" mnemonicParsing="false" onAction="#toggleDarkMode" text="Toggle Dark Mode" />
+
+   </children>
+   <stylesheets>
+      <URL fx:id="lightModeStylesheet" value="@light-mode.css" />
+
+   </stylesheets>
+</AnchorPane>

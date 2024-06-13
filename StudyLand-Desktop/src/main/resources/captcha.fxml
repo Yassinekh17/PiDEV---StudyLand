@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="138.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Captcha">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff72" height="38.0" layoutX="95.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="107.0" />
+     <TextField fx:id="captchaField" layoutX="60.0" layoutY="78.0" prefHeight="30.0" prefWidth="179.0" promptText="Enter CAPTCHA here" stylesheets="@style/styleDash.css" />
+     <Label fx:id="captchaLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="40.0" prefHeight="22.0" prefWidth="64.0" styleClass="label" text="Chiller" textAlignment="RIGHT">
+      <font>
+         <Font name="Chiller" size="18.0" />
+      </font>
+   </Label>
+     <Button layoutX="246.0" layoutY="77.0" onAction="#handleCaptchaVerification" prefHeight="30.0" prefWidth="42.0" styleClass="home_recherche_button" stylesheets="@style/styleDash.css">
+      <graphic>
+         <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@captcha.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
+
+</AnchorPane>

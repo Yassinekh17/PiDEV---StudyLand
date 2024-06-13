@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="835.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashbordFormateurParDefaut">
+   <children>
+      <HBox alignment="CENTER" layoutY="-3.0" prefHeight="306.0" prefWidth="1330.0" style="-fx-background-color: #E6EEFF;">
+         <children>
+            <ImageView fitHeight="376.0" fitWidth="812.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/forrrrrrrrmateur.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="chartContainer1" layoutX="14.0" layoutY="430.0" prefHeight="345.0" prefWidth="442.0" />
+      <AnchorPane fx:id="id_userdetail" layoutX="531.0" layoutY="408.0" prefHeight="259.0" prefWidth="402.0" />
+      <Label layoutX="62.0" layoutY="383.0" prefHeight="18.0" prefWidth="346.0" text="statistique formation par categories" textFill="#3000df">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="567.0" layoutY="383.0" prefHeight="18.0" prefWidth="346.0" text="Votre carte dans StudyLand" textFill="#3000df">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

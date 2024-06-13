@@ -1,0 +1,39 @@
+<div class="box-body">
+    <table id="example2" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Image</th>
+                <th>Supprimer</th>
+                <th>Modifier</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in Users %}
+            <tr>
+                <td>{{ user.Nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+
+                <td> {% if user.image %}
+                    <img src="{{ asset('/uploads/' ~ user.image) }}" style="max-width: 100px; max-height: 100px;">
+                    {% else %}
+                    Aucune image disponible
+                    {% endif %}
+                </td>
+                <td>
+
+                </td>
+
+
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div><!-- /.box-body -->

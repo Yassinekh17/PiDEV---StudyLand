@@ -1,0 +1,10 @@
+# config/routes.yaml
+
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+countprixformation:
+    path: /countprixformation
+    controller: App\Controller\FormationController::countprixformation
+

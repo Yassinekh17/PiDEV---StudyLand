@@ -1,0 +1,56 @@
+.text-input {
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #007bff;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.button {
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #007bff;
+    -fx-text-fill: #fff;
+}
+
+.combo-box {
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #007bff;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.web-view {
+    -fx-border-width: 1px;
+    -fx-border-color: #007bff;
+    -fx-border-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #0069d9;
+}
+
+.button:pressed {
+    -fx-background-color: #CADFDF;
+}
+
+.button:disabled {
+    -fx-opacity: 0.5;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-padding: 0 0 5px 0;
+    -fx-text-fill: #3E5BB2; /* Change the color to a shade of gray */
+}

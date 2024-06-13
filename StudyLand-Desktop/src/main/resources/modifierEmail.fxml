@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="684.0" prefWidth="997.0" style="-fx-background-color: #ffffff;" stylesheets="@style/styleDash.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierEmail">
+   <children>
+      <Button fx:id="btn_modifierEmail" layoutX="241.0" layoutY="476.0" mnemonicParsing="false" onAction="#modifier_email" prefHeight="30.0" prefWidth="78.0" styleClass="button_inscrit" stylesheets="@style/styleDash.css" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Button>
+      <Line endX="-29.800018310546875" endY="3.0517578125E-5" layoutX="181.0" layoutY="545.0" startX="-121.4000015258789" stroke="#00000054" />
+      <Label layoutX="69.0" layoutY="558.0" prefHeight="18.0" prefWidth="186.0" text="Vous n'avez pas reçu de code ?" textFill="#000000c0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="-36.800018310546875" layoutX="330.0" layoutY="544.0" startX="-132.80001831054688" startY="3.0517578125E-5" stroke="#00000054" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="536.0" prefHeight="18.0" prefWidth="53.0" text="Aider " textAlignment="CENTER" textFill="#aea5a5">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Text fill="#151515" fontSmoothingType="LCD" layoutX="107.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: true;" text="Changer Email" wrappingWidth="296.7999877929685">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label fx:id="erroMessage" layoutX="102.0" layoutY="458.0" prefHeight="25.0" prefWidth="223.0" textFill="#ef0404" />
+      <AnchorPane layoutX="373.0" layoutY="29.0" prefHeight="622.0" prefWidth="574.0" style="-fx-background-color: #ffffff;" stylesheets="@style/styleDash.css">
+         <children>
+            <Text layoutX="59.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StudyLand vous offre la possibilité de modifier votre adresse e-mail en toute sécurité. " textAlignment="CENTER" wrappingWidth="428.7661437988281">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avec cette fonctionnalité, vous pouvez être assuré(e) que vos données et points resteront intacts. Merci de choisir StudyLand pour une expérience d'apprentissage fluide et sécurisée." wrappingWidth="391.2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="81.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nous envoyons un code de sécurité à votre numéro de téléphone pour garantir l'authenticité de cette modification. " wrappingWidth="407.4406127929685">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Line endX="-92.800048828125" endY="315.6000061035156" layoutX="130.0" layoutY="190.0" startX="-92.800048828125" startY="-10.0" stroke="#d9d1d1" strokeWidth="2.0" />
+            <Circle fill="#fafbfc" layoutX="36.0" layoutY="229.0" opacity="0.0" radius="8.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-background-color: #F8982A;" />
+            <Circle fill="WHITE" layoutX="524.0" layoutY="673.0" radius="8.0" stroke="#f7f5f500" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="530.0" layoutY="173.0" radius="8.0" stroke="#f7f5f500" strokeType="INSIDE" />
+            <Circle fill="#f8982a" layoutX="38.0" layoutY="229.0" radius="4.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Circle fill="#f8982a" layoutX="38.0" layoutY="318.0" radius="4.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Circle fill="#f8982a" layoutX="38.0" layoutY="439.0" radius="4.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <ImageView fitHeight="89.0" fitWidth="98.0" layoutX="59.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="78.0" layoutX="476.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/email55.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="51.0" prefHeight="48.0" prefWidth="735.0" style="-fx-background-color: #2F2B6D;" text="Modifier Email" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="84.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/attendre.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_num" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="224.0" prefHeight="40.0" prefWidth="234.0" promptText="num" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="80.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/mobile.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_email" alignment="CENTER_RIGHT" layoutX="71.0" layoutY="279.0" prefHeight="40.0" prefWidth="234.0" promptText="Email" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="80.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/email.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_email_new" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="340.0" prefHeight="40.0" prefWidth="234.0" promptText="Email" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="80.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/email.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_code" alignment="CENTER" layoutX="71.0" layoutY="405.0" prefHeight="40.0" prefWidth="234.0" promptText="*    *    *    *      *" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="80.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/mot-de-passe.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_code" layoutX="266.0" layoutY="411.0" mnemonicParsing="false" onAction="#Envoyer_code" prefHeight="18.0" prefWidth="25.0" style="-fx-background-color: #2F2B6D;" styleClass="button_inscrit" stylesheets="@style/styleDash.css" text="&gt;" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!-- Favicon -->
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700family=Open+Sans:wght@400;600display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link href="{{ asset('img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700family=Open+Sans:wght@400;600display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        {% block stylesheets %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            width: 100px;
+            height: 150px;
+            background-color: #ffffff;
+            border: 2px solid #333333;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .card.flip {
+            transform: rotateY(180deg);
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Studyland</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="{{ path('home') }}" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">Formation</a>
+                    <a href="about.html" class="nav-item nav-link">Evalutaion</a>
+                    <a href="about.html" class="nav-item nav-link">projet</a>
+
+                    <a href="course.html" class="nav-item nav-link"></a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Panier</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="detail.html" class="dropdown-item">Achat</a>
+                            <a href="feature.html" class="dropdown-item">Favoris</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+             <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ path('editProfile', { id: user.id }) }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {% if user.image %}
+                        <img src="{{ asset('/uploads/' ~ user.image) }}" class="user-image" style="max-width: 40px; max-height: 40px; border-radius: 50%;">
+                    {% else %}
+                        Aucune image disponible
+                    {% endif %}
+                    {{ user.nom }} <!-- Affichage du nom de l'utilisateur -->
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-divider"></div>
+<a class="dropdown-item" href="{{ path('editProfile', { id: user.id }) }}">Paramètres</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ path('securiteClient', { id: user.id }) }}">Securite</a>
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item"  href="{{ path('logout')}}">Déconnexion</a>
+                </div>
+            </li>
+        </ul>
+
+            </div>
+        </nav>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let timeLeft = 25; // Temps initial en secondes
+        let timer;
+
+        timer = setInterval(() => {
+            document.getElementById('timer').innerText = timeLeft;
+            timeLeft--;
+
+            if (timeLeft < 0 || score >= 4) {
+                clearInterval(timer);
+                endGame(timeLeft < 0); // Si le temps est écoulé, endGame avec timeOver=true, sinon timeOver=false
+            }
+        }, 1000);
+    });
+
+     function endGame(timeOver) {
+        let message;
+        if (timeOver) {
+            message = "Le temps est écoulé! Vous avez perdu.";
+        } else {
+            message = "Félicitations! Vous avez gagné!";
+        }
+
+        // Utiliser Swal.fire pour afficher l'alerte
+        Swal.fire({
+            text: message,
+            icon: timeOver ? 'error' : 'success'
+        });
+
+        // Empêcher les clics sur les cartes après la fin du jeu
+        document.querySelectorAll('.card').forEach(card => {
+            card.onclick = null;
+        });
+    }
+</script>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let timeLeft = 25; // Temps initial en secondes
+        let timer;
+
+        timer = setInterval(() => {
+            document.getElementById('timer').innerText = timeLeft;
+            timeLeft--;
+
+            if (timeLeft < 0 || score >= 4) {
+                clearInterval(timer);
+                endGame(timeLeft < 0); // Si le temps est écoulé, endGame avec timeOver=true, sinon timeOver=false
+            }
+        }, 1000);
+    });
+
+     function endGame(timeOver) {
+        let message;
+        if (timeOver) {
+            message = "Le temps est écoulé! Vous avez perdu.";
+        } else {
+            message = "Félicitations! Vous avez gagné!";
+            // Si l'utilisateur a gagné et que son score est supérieur ou égal à 4, incrémentez son bonus
+            if (score = 4) {
+                fetch('{{ path('increment_bonus', { id: user.id }) }}')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                    })
+                    .catch(error => {
+                        console.error('Erreur lors de l\'incrémentation du bonus:', error);
+                    });
+            }
+        }
+
+        // Utiliser Swal.fire pour afficher l'alerte
+        Swal.fire({
+            text: message,
+            icon: timeOver ? 'error' : 'success'
+        });
+
+        // Empêcher les clics sur les cartes après la fin du jeu
+        document.querySelectorAll('.card').forEach(card => {
+            card.onclick = null;
+        });
+    }
+</script>
+ <div class="container-fluid p-0">
+        
+    </div>
+<div id="timer"></div>
+    <div class="cards-container">
+        <div class="card" onclick="flipCard(this, 'img/card1.jpg')">
+            <img class="img-fluid w-100" src="img/card1.jpg" alt="">
+        </div>
+        <div class="card" onclick="flipCard(this, 'img/card2.jpg')">
+            <img class="img-fluid w-100" src="img/card2.jpg" alt="">
+        </div>
+        <div class="card" onclick="flipCard(this, 'img/card3.jpg')">
+            <img class="img-fluid w-100" src="img/card3.jpg" alt="">
+        </div>
+    </div>
+    <div class="cards-container">
+         <div class="card" onclick="flipCard(this, 'img/card3.jpg')">
+            <img class="img-fluid w-100" src="img/card3.jpg" alt="">
+        </div>
+        <div class="card" onclick="flipCard(this, 'img/card1.jpg')">
+            <img class="img-fluid w-100" src="img/card1.jpg" alt="">
+        </div>
+         <div class="card" onclick="flipCard(this, 'img/card1.jpg')">
+            <img class="img-fluid w-100" src="img/card1.jpg" alt="">
+        </div>
+    </div>
+     <div class="cards-container">
+        <div class="card" onclick="flipCard(this, 'img/card1.jpg')">
+            <img class="img-fluid w-100" src="img/card1.jpg" alt="">
+        </div>
+         <div class="card" onclick="flipCard(this, 'img/card2.jpg')">
+            <img class="img-fluid w-100" src="img/card2.jpg" alt="">
+        </div>
+        <div class="card" onclick="flipCard(this, 'img/card3.jpg')">
+            <img class="img-fluid w-100" src="img/card3.jpg" alt="">
+        </div>
+    </div>
+    
+    <div class="message" id="result-message"></div>
+
+    <script>
+        let score = 0;
+        let flippedCards = [];
+        let cardPairs = ['img/sysy.jpg']; // Les paires de cartes disponibles
+        let matchedPairs = []; // Les paires de cartes déjà trouvées
+
+        // Retourner les cartes face cachée après un délai de 1 seconde
+        setTimeout(() => {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('flip');
+                card.innerHTML = '<img class="img-fluid w-100" src="img/logo.png" alt="">';
+            });
+        }, 1000);
+
+        function flipCard(card, imageSrc) {
+            if (flippedCards.length === 2 || matchedPairs.includes(card)) {
+                return;
+            }
+
+            flippedCards.push(card);
+
+            card.classList.add('flip');
+
+            card.innerHTML = '<img class="img-fluid w-100" src="' + imageSrc + '" alt="">';
+
+            if (flippedCards.length === 2) {
+                checkForMatch();
+            }
+        }
+
+        function checkForMatch() {
+            const card1 = flippedCards[0];
+            const card2 = flippedCards[1];
+            const imageSrc1 = card1.querySelector('img').getAttribute('src');
+            const imageSrc2 = card2.querySelector('img').getAttribute('src');
+
+            if (imageSrc1 === imageSrc2) {
+                score++; // Incrémente le score lorsque l'utilisateur trouve une paire correspondante
+                document.getElementById('result-message').innerText = "Bonne correspondance! Score: " + score;
+                matchedPairs.push(card1, card2);
+            } else {
+                setTimeout(() => {
+                    card1.classList.remove('flip');
+                    card2.classList.remove('flip');
+                    card1.innerHTML = '<img class="img-fluid w-100" src="img/logo.png" alt="">';
+                    card2.innerHTML = '<img class="img-fluid w-100" src="img/logo.png" alt="">';
+                }, 1000);
+            }
+
+            flippedCards = [];
+        }
+    </script>
+</body>
+</html>

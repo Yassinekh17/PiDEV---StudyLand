@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="990.0" prefWidth="1293.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ForamteurAffichage">
+   <children>
+      <AnchorPane prefHeight="908.0" prefWidth="1146.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="117.0" layoutY="27.0" text="Formateur" textFill="#0b41e4">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tab_formateur" layoutX="95.0" layoutY="75.0" prefHeight="187.0" prefWidth="513.0" stylesheets="@style/styleDash.css">
+               <columns>
+                  <TableColumn fx:id="nom_user" prefWidth="77.60003662109375" text="     nom" />
+                  <TableColumn fx:id="pre_user" prefWidth="93.59996032714844" text="      prénom" />
+                  <TableColumn fx:id="email_user" prefWidth="218.4000244140625" text="         Email" />
+                  <TableColumn fx:id="supprimer_user" minWidth="6.39996337890625" prefWidth="121.5999694824219" text="      Supprimer" />
+               </columns>
+            </TableView>
+            <Line endX="317.79998779296875" layoutX="206.0" layoutY="285.0" startX="79.4000244140625" />
+            <Label layoutX="402.0" layoutY="552.0" />
+            <Label layoutX="56.0" layoutY="426.0" stylesheets="@style/styleDash.css" text="Demande d'ajout d'un formateur à l'équipe" textFill="#0b41e4">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorEmailLabel" contentDisplay="TEXT_ONLY" layoutX="578.0" layoutY="550.0" prefHeight="26.0" prefWidth="166.0" textAlignment="CENTER" textFill="#f41414" />
+            <Label fx:id="errorEmailLabel1" contentDisplay="TEXT_ONLY" layoutX="768.0" layoutY="696.0" prefHeight="26.0" prefWidth="166.0" textAlignment="CENTER" textFill="#f41414" />
+            <Label layoutX="318.0" layoutY="560.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="322.0" layoutX="56.0" layoutY="489.0" stroke="BLACK" strokeType="INSIDE" width="804.0" />
+            <TextField fx:id="id_prenom" alignment="CENTER" layoutX="605.0" layoutY="540.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="194.0" promptText="Prenom" stylesheets="@style/styleDash.css" />
+            <TextField fx:id="id_email" layoutX="383.0" layoutY="607.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="194.0" promptText="exmple@gmail.com" stylesheets="@style/styleDash.css" />
+            <Label fx:id="errorEmailLabel2" contentDisplay="TEXT_ONLY" layoutX="397.0" layoutY="654.0" prefHeight="26.0" prefWidth="166.0" textAlignment="CENTER" textFill="#f41414" />
+            <Button fx:id="btn_ajouter" layoutX="705.0" layoutY="696.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="35.0" prefWidth="126.0" styleClass="button_inscrit" stylesheets="@style/styleDash.css" text="Ajouter" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="400.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/email.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="620.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/mot-de-passe.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="611.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/gens.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="id_nom" alignment="CENTER" cacheShape="false" centerShape="false" layoutX="383.0" layoutY="540.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="194.0" promptText="Nom" scaleShape="false" stylesheets="@style/styleDash.css" />
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="400.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/gens.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="213.0" fitWidth="226.0" layoutX="120.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/login.png" />
+               </image>
+            </ImageView>
+            <Line endX="126.20001220703125" endY="220.60003662109375" layoutX="231.0" layoutY="508.0" startX="126.20001220703125" startY="19.399993896484375" />
+            <Label fx:id="errorEmailLabel11" contentDisplay="TEXT_ONLY" layoutX="110.0" layoutY="714.0" prefHeight="59.0" prefWidth="239.0" textAlignment="CENTER" textFill="#f41414" />
+            <PasswordField fx:id="id_mdp" alignment="CENTER_RIGHT" layoutX="614.0" layoutY="608.0" prefHeight="42.0" prefWidth="186.0" promptText="mot de passe" stylesheets="@style/styleDash.css" />
+            <Label fx:id="errorMessage" layoutX="472.0" layoutY="667.0" prefHeight="44.0" prefWidth="302.0" textAlignment="CENTER" textFill="#f70404">
+               <font>
+                  <Font name="Dubai Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorMessage1" layoutX="123.0" layoutY="751.0" prefHeight="44.0" prefWidth="302.0" textAlignment="CENTER" textFill="#f70404">
+               <font>
+                  <Font name="Dubai Bold" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="id_detailUser" layoutX="621.0" layoutY="76.0" prefHeight="377.0" prefWidth="358.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

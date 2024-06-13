@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="560.0" prefWidth="811.0" style="-fx-background-color: #ffffff;" stylesheets="@style/styleDash.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GererProfile">
+   <children>
+      <Label fx:id="id_prenom_gerer" layoutX="369.0" layoutY="355.0">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id_nom" layoutX="520.0" layoutY="153.0" prefHeight="44.0" prefWidth="216.0" stylesheets="@style/styleDash.css" />
+      <TextField fx:id="id_email" layoutX="522.0" layoutY="278.0" prefHeight="44.0" prefWidth="216.0" stylesheets="@style/styleDash.css" />
+      <TextField fx:id="id_prenom" layoutX="520.0" layoutY="215.0" prefHeight="44.0" prefWidth="216.0" stylesheets="@style/styleDash.css" />
+      <Label layoutX="442.0" layoutY="156.0" textFill="#262424e0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="222.0" textFill="#262424e0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="287.0" stylesheets="@style/styleDash.css" textFill="#262424e0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="id_nom_gerer" layoutX="317.0" layoutY="356.0">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="-23.5999755859375" endY="246.79998779296875" layoutX="422.0" layoutY="97.0" startX="-23.599945068359375" startY="41.19999694824219" stroke="#2e19cf" strokeLineCap="BUTT" strokeWidth="0.5" />
+      <Button fx:id="btn_Modifier" layoutX="628.0" layoutY="340.0" mnemonicParsing="false" onAction="#ModifierUser" prefHeight="30.0" prefWidth="110.0" styleClass="button_inscrit" stylesheets="@style/styleDash.css" text="Modifier" textFill="#fffefe">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label fx:id="erroMessage" contentDisplay="CENTER" layoutX="25.0" layoutY="348.0" prefHeight="58.0" prefWidth="410.0" textAlignment="CENTER" textFill="#e40b0b">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="id_image" fitHeight="207.0" fitWidth="225.0" layoutX="110.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/Sync.gif" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="43.0" prefHeight="62.0" prefWidth="377.0" style="-fx-background-color: #06007b;" text="Gérer profile " textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="7.0" layoutX="61.0" layoutY="441.0" stroke="BLACK" strokeType="INSIDE" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff30" height="7.0" layoutX="41.0" layoutY="441.0" stroke="BLACK" strokeType="INSIDE" width="17.0" />
+      <Label layoutX="50.0" layoutY="409.0" prefHeight="18.0" prefWidth="186.0" text="Vous n'avez pas reçu de code ?" textFill="#000000c0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Text fill="#151515" fontSmoothingType="LCD" layoutX="451.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: true;" text="Nom" wrappingWidth="44.000024414062636">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#151515" fontSmoothingType="LCD" layoutX="450.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: true;" text="Prénom" wrappingWidth="53.600000000000136">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#151515" fontSmoothingType="LCD" layoutX="459.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: true;" text="Email" wrappingWidth="53.600000000000136">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="703.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/gens.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="707.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/gens.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="708.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/email.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_changer_image" layoutX="273.0" layoutY="346.0" mnemonicParsing="false" onAction="#modifierImage" prefHeight="30.0" prefWidth="110.0" styleClass="button_inscrit" stylesheets="@style/styleDash.css" text="changer Image" textFill="#fffefe">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

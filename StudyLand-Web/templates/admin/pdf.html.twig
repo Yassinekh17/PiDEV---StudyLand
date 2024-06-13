@@ -1,0 +1,119 @@
+*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyLand</title>
+    <style>
+        body {
+            background-color: #e1f5fe; /* Bleu pastel */
+            font-family: Arial, sans-serif;
+            color: #333; /* Couleur du texte */
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            color: #0277bd; /* Bleu foncé */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #80d8ff; /* Bleu ciel */
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #80d8ff; /* Bleu ciel */
+            color: #333;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #e1f5fe; /* Bleu pastel plus clair */
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #b3e5fc; /* Bleu pastel plus foncé */
+        }
+
+        #footer {
+            background-color: #80d8ff; /* Bleu ciel */
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: #333;
+            transition: color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .social-links a:hover {
+            color: #0277bd; /* Bleu foncé au survol */
+        }
+    </style>
+</head>
+<body>
+<header class="clearfix">
+    <h1 class="logo">StudyLand</h1>
+    <h1 align="center">Liste des Users</h1>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Rôle</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.Nom }}</td>
+            <td>{{ user.prenom }}</td>
+            <td>{{ user.email}}</td>
+            <td>{{ user.Role}}</td>
+            <td>
+                {% set imagePath = asset('uploads/' ~ user.image) %}
+                <img src="{{ imagePath }}" width="100" height="100">
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="5">Aucun enregistrement trouvé</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</header>
+<footer id="footer">
+    <div class="footer-contact">
+        <h3>StudyLand</h3>
+        <p>Ghazela, Ariana, Tunisie<br>
+            <strong>Téléphone:</strong> +216 27907074<br>
+            <strong>Email:</strong> StudyLand002@gmail.com</p>
+    </div>
+    <div class="social-links">
+        <a href="#" class="twitter">Twitter</a>
+        <a href="#" class="facebook">Facebook</a>
+        <a href="#" class="instagram">Instagram</a>
+        <a href="#" class="google-plus">Google Plus</a>
+        <a href="#" class="linkedin">LinkedIn</a>
+    </div>
+</footer>
+</body>
+</html>

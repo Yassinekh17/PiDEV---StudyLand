@@ -1,0 +1,15 @@
+/* Style pour la VBox principale */
+#vbxquesrep {
+    -fx-spacing: 10; /* Espacement entre les questions */
+}
+
+/* Style pour les labels des questions */
+.question-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+}
+
+/* Style pour les cases à cocher des réponses */
+.checkbox {
+    -fx-font-size: 12pt;
+}
